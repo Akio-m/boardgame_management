@@ -4,7 +4,7 @@
     <v-simple-table>
       <template v-slot:default>
         <thead>
-          <tr>
+          <tr class="blue lighten-5">
             <th class="text-center">ボードゲーム名</th>
             <th class="text-center">プレイ可能人数(人)</th>
           </tr>
@@ -47,35 +47,4 @@ export default class BoardGame extends Vue {
 </script>
 
 <style scoped lang="scss">
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-
-.boardgame-table {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: center;
-  border-top: 1px solid #ccc;
-  th {
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-    background-color: #42b983;
-    color: #ffffff;
-  }
-  td {
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-  }
-}
 </style>
