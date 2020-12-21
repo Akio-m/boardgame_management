@@ -1,29 +1,23 @@
 <template>
-  <div class="hello">
+  <v-container class="grey lighten-5">
     <h1>BoardGame List</h1>
-    <table class="boardgame-table">
-      <thead>
-        <tr>
-          <th>ボードゲーム名</th>
-          <th>プレイ可能人数(人)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>カタン スタンダード版</td>
-          <td>3 - 4</td>
-        </tr>
-        <tr>
-          <td>ニュクトフォビア</td>
-          <td>3 - 5</td>
-        </tr>
-        <tr>
-          <td>裏切りの工作員</td>
-          <td>3 - 9</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+    <v-simple-table>
+      <template v-slot:default>
+        <thead>
+          <tr>
+            <th class="text-center">ボードゲーム名</th>
+            <th class="text-center">プレイ可能人数(人)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="boardgame in boardgames" :key="boardgame.name" class="text-center">
+            <td>{{ boardgame.name }}</td>
+            <td>{{ boardgame.players }}</td>
+          </tr>
+        </tbody>
+      </template>
+    </v-simple-table>
+  </v-container>
 </template>
 
 <script lang="ts">
@@ -31,10 +25,24 @@ import { Component, Prop, Vue } from "vue-property-decorator";
 
 @Component
 export default class BoardGame extends Vue {
-  //@Prop() private msg!: string;
-//   setup() {
-
-//   }
+  data () {
+    return {
+      boardgames: [
+        {
+          name: "カタン スタンダード版",
+          players: "3 - 4"
+        },
+        {
+          name: "ニュクトフォビア",
+          players: "3 - 5"
+        },
+        {
+          name: "裏切りの工作員",
+          players: "3 - 9"
+        }
+      ]
+    }
+  }
 }
 </script>
 
@@ -70,5 +78,4 @@ a {
     border-bottom: 1px solid #ccc;
   }
 }
-
 </style>

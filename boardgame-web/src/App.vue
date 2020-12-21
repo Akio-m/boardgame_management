@@ -1,29 +1,24 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.jpg" />
-    <BoardGame/>
-  </div>
+  <v-app>
+    <v-main>
+      <BoardGame/>
+    </v-main>å
+  </v-app>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import Vue from "vue";
 import BoardGame from "./components/BoardGame.vue";
 
-@Component({
+export default Vue.extend({
+  name: "App",
+
   components: {
     BoardGame
-  }
-})
-export default class App extends Vue {}
-</script>
+  },
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+  data: () => ({
+    //
+  })
+});
+</script>
