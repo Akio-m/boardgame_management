@@ -1,0 +1,3 @@
+interface BoardgamePort {
+  findAll(): BoardGames;
+}

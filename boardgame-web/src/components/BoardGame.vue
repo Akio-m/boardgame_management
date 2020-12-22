@@ -43,6 +43,10 @@ export default class BoardGame extends Vue {
       ]
     }
   }
+  created() {
+
+  }
+
 }
 </script>
 
