@@ -1,3 +1,3 @@
-interface BoardgamePort {
-  findAll(): BoardGames;
+export default interface BoardgamePort {
+  getBoardgames(): Promise<BoardGames>;
 }

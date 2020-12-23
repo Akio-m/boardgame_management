@@ -1,9 +1,10 @@
 export default class BoardgameUsecase {
-  constructor(boardgamePort: BoardgamePort, boardgamePresenter: BoardgamePresenter) {
-
-  }
+  constructor(
+    readonly boardgamePort: BoardgamePort,
+    readonly boardgamePresenter: BoardgamePresenter) {}
 
   async findAll(): Promise<void> {
-
+    const boardgames = this.boardgamePort.findAll();
+    this.boardgamePresenter.setBoardgame(boardgames);
   }
 }
