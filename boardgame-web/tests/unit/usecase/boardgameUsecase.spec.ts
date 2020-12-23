@@ -1,3 +1,4 @@
+import BoardgamePort from "@/port/boardgamePort";
 import BoardgameUsecase from "@/usecase/boardgameUsecase";
 
 describe("BoardgameUsecase", () => {
@@ -7,16 +8,16 @@ describe("BoardgameUsecase", () => {
     const boardGameUsecase = new BoardgameUsecase(boardgamePortMock, boardgamePresenterMock);
 
     const boardgames = {} as BoardGames;
-    const findAllFn = jest.fn();
-    findAllFn.mockReturnValueOnce(boardgames)
-    boardgamePortMock.findAll = findAllFn;
+    const getBoardGamesFn = jest.fn();
+    getBoardGamesFn.mockReturnValueOnce(boardgames)
+    boardgamePortMock.getBoardgames = getBoardGamesFn;
 
-    const setBoardgameFn = jest.fn();
-    boardgamePresenterMock.setBoardgame = setBoardgameFn;
+    const setBoardgamesFn = jest.fn();
+    boardgamePresenterMock.setBoardgames = setBoardgamesFn;
 
-    await boardGameUsecase.findAll();
+    await boardGameUsecase.getBoardGames();
 
-    expect(boardgamePortMock.findAll).toHaveBeenCalled();
-    expect(boardgamePresenterMock.setBoardgame).toHaveBeenCalledWith(boardgames);
+    expect(boardgamePortMock.getBoardgames).toHaveBeenCalled();
+    expect(boardgamePresenterMock.setBoardgames).toHaveBeenCalledWith(boardgames);
   });
 });
