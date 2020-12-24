@@ -1,3 +1,5 @@
+import { BoardGame, BoardGames, Name, Players } from "@/domain/boardgame";
+import BoardgameDriver from "@/driver/boardgameDriver";
 import BoardgameGateway from "@/gateway/boardgameGateway";
 
 describe("BoardgameGateway", () => {
@@ -31,7 +33,7 @@ describe("BoardgameGateway", () => {
     const expected = new BoardGames([
       new BoardGame(new Name("boardgame1"), new Players("1 - 2")),
       new BoardGame(new Name("boardgame2"), new Players("3 - 4")),
-      new BoardGame(new Name("boardgame3"), new Players("5 -"))
+      new BoardGame(new Name("boardgame3"), new Players("5 - "))
     ]);
 
     expect(actual).toEqual(expected);

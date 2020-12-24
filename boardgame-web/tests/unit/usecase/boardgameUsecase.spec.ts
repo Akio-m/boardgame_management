@@ -1,4 +1,6 @@
+import { BoardGames } from "@/domain/boardgame";
 import BoardgamePort from "@/port/boardgamePort";
+import BoardgamePresenter from "@/presenter/boardgamePresenter";
 import BoardgameUsecase from "@/usecase/boardgameUsecase";
 
 describe("BoardgameUsecase", () => {

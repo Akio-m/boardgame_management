@@ -1,14 +1,14 @@
-class Name {
+export class Name {
   constructor(readonly value: string) {}
 }
 
-class Players {
+export class Players {
   constructor(readonly value: string) {}
 }
-class BoardGame {
+export class BoardGame {
   constructor(readonly name: Name, readonly players: Players) {}
 }
 
-class BoardGames{
+export class BoardGames{
   constructor(readonly values: BoardGame[]) {}
 }
