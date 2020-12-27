@@ -21,6 +21,10 @@
 </template>
 
 <script lang="ts">
+import BoardgameDriver from "@/driver/boardgameDriver";
+import BoardgameGateway from "@/gateway/boardgameGateway";
+import BoardgamePresenter from "@/presenter/boardgamePresenter";
+import BoardgameUsecase from "@/usecase/boardgameUsecase";
 import { Component, Prop, Vue } from "vue-property-decorator";
 
 @Component
@@ -44,7 +48,12 @@ export default class BoardGame extends Vue {
     }
   }
   created() {
-
+    // TODO: injectするようにする
+    const presenter = new BoardgamePresenter();
+    const driver = new BoardgameDriver();
+    const port = new BoardgameGateway(driver);
+    const usecase = new BoardgameUsecase(port, presenter);
+    usecase.getBoardGames();
   }
 
 }

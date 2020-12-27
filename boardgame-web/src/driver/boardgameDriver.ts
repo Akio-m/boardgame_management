@@ -6,6 +6,8 @@ export type BoardGamesJson = { boardgames: BoardGameJson[] }
 
 export default class BoardgameDriver {
   async getBoardgames(): Promise<BoardGamesJson> {
-    return await (await axios.get(`http://localhost:21001/v1/boardgames`)).data;
+    const port = 21001;
+    const url = `http://localhost:${port}`
+    return await (await axios.get(`${url}/v1/boardgames`)).data;
   }
 }
