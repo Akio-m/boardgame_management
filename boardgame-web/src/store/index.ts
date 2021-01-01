@@ -17,5 +17,8 @@ export default new Vuex.Store({
     update (context, boadgames) {
       context.commit('update', boadgames);
     }
+  },
+  getters: {
+    getBoardGames(state) { return state.boardgames }
   }
 });
