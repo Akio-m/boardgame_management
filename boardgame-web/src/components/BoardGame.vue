@@ -31,20 +31,7 @@ import { Component, Prop, Vue } from "vue-property-decorator";
 export default class BoardGame extends Vue {
   data () {
     return {
-      boardgames: [
-        {
-          name: "カタン スタンダード版",
-          players: "3 - 4"
-        },
-        {
-          name: "ニュクトフォビア",
-          players: "3 - 5"
-        },
-        {
-          name: "裏切りの工作員",
-          players: "3 - 9"
-        }
-      ]
+      boardgames: this.$store.state.boardgames
     }
   }
   created() {
@@ -55,6 +42,7 @@ export default class BoardGame extends Vue {
     const usecase = new BoardgameUsecase(port, presenter);
     usecase.getBoardGames();
   }
+  // ここらへんでデータを読み込む
 
 }
 </script>
