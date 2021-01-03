@@ -1,6 +1,15 @@
 import axios from "axios";
 
-export type BoardGameJson = { name: string, players: string }
+export type BoardGameJson = {
+  name: string,
+  name_kana: string,
+  players_min: string,
+  players_max: string,
+  play_time_min: string,
+  play_time_max: string,
+  ages: string,
+  manufacturer: string
+}
 
 export type BoardGamesJson = { boardgames: BoardGameJson[] }
 

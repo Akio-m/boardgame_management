@@ -8,7 +8,7 @@ export default class BoardgameGateway implements BoardgamePort {
     const boardgamesJson = await this.boardgameDriver.getBoardgames();
     const list =
       boardgamesJson.boardgames.map(v =>
-        new BoardGame(new Name(v.name), new Players(v.players))
+        new BoardGame(new Name(v.name), new Players(`${v.players_min} - ${v.players_max}`)) // TODO: playersは後々分けるため細かいドメインを作っていない
       )
     return new BoardGames(list);
   }

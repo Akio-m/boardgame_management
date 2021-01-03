@@ -1,0 +1,336 @@
+{
+  "boardgames": {
+    "boardgames":[
+      {
+        "name": "PRIVACY",
+        "name_kana": "プライバシーニホンゴバン",
+        "players_min": "5",
+        "players_max": "12",
+        "play_time_min": "45",
+        "play_time_max": "",
+        "ages": "18+",
+        "manufacturer": "DEAR SPIELE"
+      },
+      {
+        "name": "MOON BASE",
+        "name_kana": "ムーンベース",
+        "players_min": "",
+        "players_max": "2",
+        "play_time_min": "30",
+        "play_time_max": "",
+        "ages": "9+",
+        "manufacturer": "itten"
+      },
+      {
+        "name": "4人の容疑者~湯けむりに消えた謎~",
+        "name_kana": "ヨニンノヨウギシャ~ユケムリニキエタナゾ~",
+        "players_min": "2",
+        "players_max": "5",
+        "play_time_min": "30",
+        "play_time_max": "",
+        "ages": "10+",
+        "manufacturer": "テンデイズゲームズ"
+      },
+      {
+        "name": "Vampire Radar",
+        "name_kana": "ヴァンパイアレーダー",
+        "players_min": "2",
+        "players_max": "4",
+        "play_time_min": "60",
+        "play_time_max": "",
+        "ages": "10+",
+        "manufacturer": "かぼへる"
+      },
+      {
+        "name": "ホシアツメ",
+        "name_kana": "ホシアツメ",
+        "players_min": "3",
+        "players_max": "5",
+        "play_time_min": "45",
+        "play_time_max": "90",
+        "ages": "10+",
+        "manufacturer": "さいころグラス"
+      },
+      {
+        "name": "Bye-Bye LEMING",
+        "name_kana": "バイバイレミング",
+        "players_min": "3",
+        "players_max": "6",
+        "play_time_min": "5",
+        "play_time_max": "15",
+        "ages": "8+",
+        "manufacturer": "KenBill"
+      },
+      {
+        "name": "たった今考えたプロポーズの言葉を君に捧ぐよ。",
+        "name_kana": "タッタイマカンガエタプロポーズノコトバヲキミニササグヨ。",
+        "players_min": "3",
+        "players_max": "6",
+        "play_time_min": "15",
+        "play_time_max": "30",
+        "ages": "13+",
+        "manufacturer": "クラグラ"
+      },
+      {
+        "name": "イロトカタチ",
+        "name_kana": "イロトカタチ",
+        "players_min": "3",
+        "players_max": "8",
+        "play_time_min": "15",
+        "play_time_max": "",
+        "ages": "6+",
+        "manufacturer": "バンダイナムコ"
+      },
+      {
+        "name": "いろかるた",
+        "name_kana": "イロカルタ",
+        "players_min": "2",
+        "players_max": "5",
+        "play_time_min": "",
+        "play_time_max": "",
+        "ages": "",
+        "manufacturer": "Kino.Q"
+      },
+      {
+        "name": "ハピエストタウン",
+        "name_kana": "ハピエストタウン",
+        "players_min": "2",
+        "players_max": "4",
+        "play_time_min": "15",
+        "play_time_max": "",
+        "ages": "6+",
+        "manufacturer": "ホッパーエンターテイメント"
+      },
+      {
+        "name": "NINE TILES PANIC",
+        "name_kana": "ナインタイルパニック",
+        "players_min": "2",
+        "players_max": "5",
+        "play_time_min": "20",
+        "play_time_max": "",
+        "ages": "7+",
+        "manufacturer": "Oink Games"
+      },
+      {
+        "name": "NINE TILES",
+        "name_kana": "ナインタイル",
+        "players_min": "2",
+        "players_max": "4",
+        "play_time_min": "15",
+        "play_time_max": "",
+        "ages": "6+",
+        "manufacturer": "Oink Games"
+      },
+      {
+        "name": "海底探検",
+        "name_kana": "カイテイタンケン",
+        "players_min": "2",
+        "players_max": "6",
+        "play_time_min": "30",
+        "play_time_max": "",
+        "ages": "8+",
+        "manufacturer": "Oink Games"
+      },
+      {
+        "name": "トリックと怪人",
+        "name_kana": "トリックトカイジン",
+        "players_min": "2",
+        "players_max": "4",
+        "play_time_min": "15",
+        "play_time_max": "",
+        "ages": "9+",
+        "manufacturer": "Oink Games"
+      },
+      {
+        "name": "目撃者たちの夜",
+        "name_kana": "モクゲキシャタチノヨル",
+        "players_min": "3",
+        "players_max": "6",
+        "play_time_min": "10",
+        "play_time_max": "",
+        "ages": "8+",
+        "manufacturer": "すごろくや"
+      },
+      {
+        "name": "ビビッドパニックコンガラッチョ",
+        "name_kana": "ビビッドパニックコンガラッチョ",
+        "players_min": "2",
+        "players_max": "4",
+        "play_time_min": "10",
+        "play_time_max": "",
+        "ages": "6+",
+        "manufacturer": "ガーター出版"
+      },
+      {
+        "name": "ドロッセルマイヤーさんの法廷気分",
+        "name_kana": "ドロッセルマイヤーサンノホウテイキブン",
+        "players_min": "4",
+        "players_max": "6",
+        "play_time_min": "20",
+        "play_time_max": "30",
+        "ages": "8+",
+        "manufacturer": "Drosselmyer's BoardGame Mart"
+      },
+      {
+        "name": "私の世界の見方",
+        "name_kana": "ワタシノセカイノミカタ",
+        "players_min": "2",
+        "players_max": "9",
+        "play_time_min": "30",
+        "play_time_max": "",
+        "ages": "10+",
+        "manufacturer": "テンデイズゲームズ"
+      },
+      {
+        "name": "DOMEMO",
+        "name_kana": "ドメモ",
+        "players_min": "2",
+        "players_max": "5",
+        "play_time_min": "5",
+        "play_time_max": "15",
+        "ages": "6+",
+        "manufacturer": "幻冬舎"
+      },
+      {
+        "name": "赤ずきんは眠らない",
+        "name_kana": "アカズキンハネムラナイ",
+        "players_min": "3",
+        "players_max": "6",
+        "play_time_min": "20",
+        "play_time_max": "",
+        "ages": "6+",
+        "manufacturer": "Arclight Games"
+      },
+      {
+        "name": "DUNGEON OF MANDOM VIII",
+        "name_kana": "ダンジョンオブマンダムエイト",
+        "players_min": "2",
+        "players_max": "4",
+        "play_time_min": "30",
+        "play_time_max": "",
+        "ages": "10+",
+        "manufacturer": "Oink Games"
+      },
+      {
+        "name": "もっとホイップを！",
+        "name_kana": "モットホイップヲ！",
+        "players_min": "2",
+        "players_max": "5",
+        "play_time_min": "20",
+        "play_time_max": "",
+        "ages": "8+",
+        "manufacturer": "ニューゲームズオーダー"
+      },
+      {
+        "name": "カラフルメモリーズ",
+        "name_kana": "カラフルメモリーズ",
+        "players_min": "3",
+        "players_max": "4",
+        "play_time_min": "20",
+        "play_time_max": "",
+        "ages": "10+",
+        "manufacturer": "Project Colorful Memories 2015"
+      },
+      {
+        "name": "ドロッセルマイヤーさんのなぞなぞ気分",
+        "name_kana": "ドロッセルマイヤーサンノナゾナゾキブン",
+        "players_min": "",
+        "players_max": "",
+        "play_time_min": "",
+        "play_time_max": "",
+        "ages": "",
+        "manufacturer": "Drosselmyer's BoardGame Mart"
+      },
+      {
+        "name": "ポラリッチ",
+        "name_kana": "ポラリッチ",
+        "players_min": "2",
+        "players_max": "4",
+        "play_time_min": "5",
+        "play_time_max": "10",
+        "ages": "6+",
+        "manufacturer": "NANAWARI"
+      },
+      {
+        "name": "8bit mock up",
+        "name_kana": "エイトビットモックアップ",
+        "players_min": "2",
+        "players_max": "5",
+        "play_time_min": "15",
+        "play_time_max": "",
+        "ages": "8+",
+        "manufacturer": "Arclight Games"
+      },
+      {
+        "name": "The@tre on Tiles",
+        "name_kana": "シアターオンタイルズ",
+        "players_min": "2",
+        "players_max": "4",
+        "play_time_min": "60",
+        "play_time_max": "",
+        "ages": "10+",
+        "manufacturer": "アース765"
+      },
+      {
+        "name": "裏切りの工作員",
+        "name_kana": "ウラギリノエージェント",
+        "players_min": "3",
+        "players_max": "9",
+        "play_time_min": "10",
+        "play_time_max": "30",
+        "ages": "15+",
+        "manufacturer": "Arclight Games"
+      },
+      {
+        "name": "エスケープルーム ザ・ゲーム",
+        "name_kana": "エスケープルーム ザ・ゲーム",
+        "players_min": "1",
+        "players_max": "5",
+        "play_time_min": "60",
+        "play_time_max": "",
+        "ages": "12+",
+        "manufacturer": "ジーピー"
+      },
+      {
+        "name": "禁断の島",
+        "name_kana": "キンダンノシマ",
+        "players_min": "2",
+        "players_max": "4",
+        "play_time_min": "30",
+        "play_time_max": "",
+        "ages": "10+",
+        "manufacturer": "Arclight Games"
+      },
+      {
+        "name": "カタン スタンダード版",
+        "name_kana": "カタンスタンダードバン",
+        "players_min": "3",
+        "players_max": "4",
+        "play_time_min": "60",
+        "play_time_max": "",
+        "ages": "8+",
+        "manufacturer": "ジーピー"
+      },
+      {
+        "name": "ニュクトフォビア",
+        "name_kana": "ニュクトフォビア",
+        "players_min": "3",
+        "players_max": "5",
+        "play_time_min": "30",
+        "play_time_max": "45",
+        "ages": "9+",
+        "manufacturer": "Arclight Games"
+      },
+      {
+        "name": "GHOST  FIGHTIN' TREASURE HUNTERS!",
+        "name_kana": "ゴーストファイティントレジャーハンター",
+        "players_min": "2",
+        "players_max": "4",
+        "play_time_min": "30",
+        "play_time_max": "",
+        "ages": "8+",
+        "manufacturer": "mattel games"
+      }
+    ]
+  }
+}

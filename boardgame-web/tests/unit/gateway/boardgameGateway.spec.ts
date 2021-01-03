@@ -11,15 +11,33 @@ describe("BoardgameGateway", () => {
       boardgames: [
         {
           name: "boardgame1",
-          players: "1 - 2"
+          name_kana: "",
+          players_min: "1",
+          players_max: "2",
+          play_time_min: "",
+          play_time_max: "",
+          ages: "",
+          manufacturer: ""
         },
         {
           name: "boardgame2",
-          players: "3 - 4"
+          name_kana: "",
+          players_min: "3",
+          players_max: "4",
+          play_time_min: "",
+          play_time_max: "",
+          ages: "",
+          manufacturer: ""
         },
         {
           name: "boardgame3",
-          players: "5 - "
+          name_kana: "",
+          players_min: "5",
+          players_max: "",
+          play_time_min: "",
+          play_time_max: "",
+          ages: "",
+          manufacturer: ""
         }
       ]
     }
