@@ -1,8 +1,10 @@
+use boardgame_api::rest::app::get_app;
+
 #[async_std::main]
 async fn main() -> Result<(), std::io::Error> {
     tide::log::start();
-    let mut app = tide::new();
-    app.at("/").get(|_| async { Ok("Hello, world!") });
+    let app = get_app();
+
     app.listen("127.0.0.1:21001").await?;
     Ok(())
 }
