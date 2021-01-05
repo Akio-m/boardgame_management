@@ -24,3 +24,23 @@ npm install
 npm run serve
 ```
 
+## development
+
+### 1. boardgame-web
+
+#### a. setup mock
+
+```
+environment/mockserver/json-server/run.sh
+```
+
+#### b. serve boardgame-web
+
+```
+npm run test:unit
+npm run serve
+```
+
+### 2. boardgame-api
+
+comming soon...
