@@ -7,3 +7,12 @@ pub async fn execute() -> Result<Boardgames, Error> {
     Boardgames::new()
   )
 }
+
+#[cfg(test)]
+mod tests {
+
+  #[test]
+  fn find_boardgame_list() {
+      assert_eq!(4, 4);
+  }
+}

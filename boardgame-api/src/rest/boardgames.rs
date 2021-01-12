@@ -46,7 +46,7 @@ impl BoardgameJson {
         players_max: if boardgame.players.max == u32::MAX { "".to_string() } else { boardgame.players.max.to_string() },
         play_time_min: if boardgame.play_time.min == u32::MIN { "".to_string() } else { boardgame.play_time.min.to_string() },
         play_time_max: if boardgame.play_time.max == u32::MAX { "".to_string() } else { boardgame.play_time.max.to_string() },
-        ages: if boardgame.ages.value == u32::MIN { "".to_string() } else { boardgame.ages.value.to_string() },
+        ages: if boardgame.ages.value == u32::MIN { "".to_string() } else { boardgame.ages.value.to_string() + "+" },
         manufacturer: boardgame.manufacturere.value,
     }
   }
@@ -59,13 +59,7 @@ mod tests {
     use super::{BoardgameJson, BoardgamesJson};
 
     #[test]
-    fn boardgames_to_json() {
-        assert_eq!(2 + 2, 4);
-    }
-
-    #[test]
     fn boardgame_to_json() {
-
       let target: Boardgames = vec![
         Boardgame {
           name: Name { name: "name1".to_string(), name_kana: "name_kana1".to_string() },
