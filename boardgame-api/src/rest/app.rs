@@ -10,6 +10,6 @@ pub fn get_app() -> Server<()> {
 
 pub fn add_route(mut app: Server<()>) -> Server<()> {
   app.at("/v1/systems/ping").get(|_| async move { systems::ping().await });
-  app.at("/v1/boardgams").get(|_| async move { boardgames::getBoardgames().await });
+  app.at("/v1/boardgams").get(|_| async move { boardgames::get_boardgames().await });
   app
 }
