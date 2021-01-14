@@ -346,6 +346,7 @@ name = "boardgame-api"
 version = "0.1.0"
 dependencies = [
  "async-std",
+ "async-trait",
  "serde",
  "serde_json",
  "tide",

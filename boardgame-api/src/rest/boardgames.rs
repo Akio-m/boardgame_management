@@ -2,11 +2,12 @@ use serde_json::json;
 use serde::{Serialize, Deserialize};
 use tide::{Response, Result, StatusCode};
 
-use crate::{domain::boardgames::Boardgame, usecase::get_boardgames};
+use crate::{domain::boardgames::Boardgame, gateway::boardgames::BoardgamesGateway, usecase::get_boardgames::GetBoardgameUsecase};
 use crate::domain::boardgames::Boardgames;
 
 pub async fn get_boardgames() -> Result<> {
-  let boardgames = get_boardgames::execute().await.unwrap();
+  let usecase = GetBoardgameUsecase { boardgame_port: BoardgamesGateway };
+  let boardgames = usecase.execute().await.unwrap();
   let body = json!(BoardgamesJson::from(boardgames));
   Ok(Response::builder(StatusCode::Ok).body(body).build())
 }
@@ -59,7 +60,7 @@ mod tests {
     use super::{BoardgameJson, BoardgamesJson};
 
     #[test]
-    fn boardgame_to_json() {
+    fn test_boardgame_to_json() {
       let target: Boardgames = vec![
         Boardgame {
           name: Name { name: "name1".to_string(), name_kana: "name_kana1".to_string() },
