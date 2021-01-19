@@ -20,9 +20,13 @@ struct BoardgamesJson {
 impl BoardgamesJson {
   fn from(boardgames: Boardgames) -> Self {
     BoardgamesJson {
-        boardgames: boardgames.into_iter()
-        .map(|v| BoardgameJson::from(v)).collect(),
+      boardgames: boardgames.0.into_iter()
+      .map(|v| BoardgameJson::from(v)).collect(),
     }
+    // BoardgamesJson {
+    //     boardgames: boardgames.into_iter()
+    //     .map(|v| BoardgameJson::from(v)).collect(),
+    // }
   }
 }
 
@@ -61,22 +65,22 @@ mod tests {
 
     #[test]
     fn test_boardgame_to_json() {
-      let target: Boardgames = vec![
-        Boardgame {
-          name: Name { name: "name1".to_string(), name_kana: "name_kana1".to_string() },
-          players: Players { min: u32::MIN, max: 1 },
-          play_time: PlayTime { min: u32::MIN, max: 30},
-          ages: Ages { value: 10 },
-          manufacturere: Manufacturer { value: "maker1".to_string() },
-        },
-        Boardgame {
-          name: Name { name: "name2".to_string(), name_kana: "name_kana2".to_string() },
-          players: Players { min: 2, max: u32::MAX },
-          play_time: PlayTime { min: 60, max: u32::MAX },
-          ages: Ages { value: u32::MIN },
-          manufacturere: Manufacturer { value: "maker2".to_string() },
-        }
-      ];
+      let target = Boardgames(vec![
+        Boardgame::new(
+          Name { name: "name1".to_string(), name_kana: "name_kana1".to_string() },
+          Players { min: u32::MIN, max: 1 },
+          PlayTime { min: u32::MIN, max: 30},
+          Ages { value: 10 },
+          Manufacturer { value: "maker1".to_string() },
+        ),
+        Boardgame::new(
+          Name { name: "name2".to_string(), name_kana: "name_kana2".to_string() },
+          Players { min: 2, max: u32::MAX },
+          PlayTime { min: 60, max: u32::MAX},
+          Ages { value: u32::MIN },
+          Manufacturer { value: "maker2".to_string() },
+        )
+      ]);
 
       let expected = BoardgamesJson {
         boardgames: vec![

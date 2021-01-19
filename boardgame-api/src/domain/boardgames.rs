@@ -1,9 +1,15 @@
 use super::{ages::Ages, manufacturer::Manufacturer, name::Name, play_time::PlayTime, players::Players};
 
+#[derive(Debug, Clone, Eq, PartialEq)]
+pub struct Boardgames(pub Vec<Boardgame>);
 
-pub type Boardgames = Vec<Boardgame>;
+impl From<Vec<Boardgame>> for Boardgames {
+  fn from(boardgames: Vec<Boardgame>) -> Boardgames {
+    Boardgames(boardgames)
+  }
+}
 
-#[derive(Debug)]
+#[derive(Debug, Clone, Eq, PartialEq)]
 pub struct Boardgame {
   pub name: Name,
   pub players: Players,
