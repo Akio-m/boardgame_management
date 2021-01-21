@@ -23,10 +23,6 @@ impl BoardgamesJson {
       boardgames: boardgames.0.into_iter()
       .map(|v| BoardgameJson::from(v)).collect(),
     }
-    // BoardgamesJson {
-    //     boardgames: boardgames.into_iter()
-    //     .map(|v| BoardgameJson::from(v)).collect(),
-    // }
   }
 }
 
