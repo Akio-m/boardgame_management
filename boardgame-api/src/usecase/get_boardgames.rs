@@ -1,4 +1,4 @@
-use crate::{domain::boardgames::Boardgames, gateway::boardgames::BoardgamesPort};
+use crate::{domain::boardgames::Boardgames, port::boardgames::BoardgamesPort};
 
 pub struct GetBoardgameUsecase<T: BoardgamesPort> {
   pub boardgame_port: T
@@ -16,7 +16,8 @@ mod tests {
 
   use async_trait::async_trait;
 
-  use crate::{domain::{ages::Ages, boardgames::{Boardgame, Boardgames}, manufacturer::Manufacturer, name::Name, play_time::PlayTime, players::Players}, gateway::boardgames::BoardgamesPort};
+  use crate::{domain::{ages::Ages, boardgames::{Boardgame, Boardgames}, manufacturer::Manufacturer, name::Name, play_time::PlayTime, players::Players}, port::boardgames::BoardgamesPort};
+
   use super::GetBoardgameUsecase;
 
 
