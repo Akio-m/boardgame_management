@@ -1,8 +1,11 @@
 # boardgame_management
 
 - boardgame-api
+  - Tide(Rust)
 - boardgame-web
-
+  - Vue2 + TypeScript
+- environment
+  - webだけ先行開発するためのmock serverがある
 ## local setup
 
 ### 1. boardgame-db
@@ -43,4 +46,7 @@ npm run serve
 
 ### 2. boardgame-api
 
-comming soon...
+```
+cargo test
+cargo run
+```
