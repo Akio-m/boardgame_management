@@ -1,5 +1,5 @@
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub struct PlayTime {
-  pub min: u32,
-  pub max: u32,
+    pub min: i32,
+    pub max: i32,
 }

@@ -12,6 +12,7 @@
 
 ```
 docker run -d --name boardgame-db -p 5432:5432 -e POSTGRES_PASSWORD=boardgame -e POSTGRES_USER=boardgame postgres:13.1-alpine
+docker run -d --name boardgame-db -p 5432:5432 -e POSTGRES_PASSWORD=boardgame -e POSTGRES_USER=boardgame akior/postgres:latest
 ```
 
 ### 2. boardgame-api
