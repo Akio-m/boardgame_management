@@ -1,1 +1,1 @@
-docker build -t boardgame-api-test -f ./Dockerfile ../../../boardgame-api
+docker build -t boardgame-api -f ./Dockerfile ../../../boardgame-api

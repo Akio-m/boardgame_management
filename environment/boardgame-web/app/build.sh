@@ -1,1 +1,1 @@
-docker build -t boardgame-web-test -f ./Dockerfile ../../../boardgame-web
+docker build -t boardgame-web -f ./Dockerfile ../../../boardgame-web

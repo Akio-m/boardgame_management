@@ -67,6 +67,8 @@ cd boardgame-web/app/ && ./build.sh
 cd -
 cd boardgame-api/app/ && ./build.sh
 cd -
+cd boardgame-api/db/ && ./build.sh
+cd -
 ./start.sh
 ```
 
@@ -79,3 +81,15 @@ access to [localhost:8080](localhost:8080)
 cd environment
 ./down.sh
 ```
+
+
+## メモ
+
+
+- boardgame-api
+  - idがない
+  - ageになっていない
+  - プロパティファイルを読み込むようにする
+    - "postgres://admin:admin@boardgame-db:5432/boardgame?options=-c search_path%3Dboardgame"
+    - "postgres://admin:admin@localhost:5432/boardgame?options=-c search_path%3Dboardgame"
+

@@ -16,7 +16,7 @@ pub async fn get_boardgames() -> Result {
         boardgame_port: BoardgamesGateway {
             db: BoardgamesDbImpl {
                 pool: r2d2::Pool::builder()
-                .build(diesel::r2d2::ConnectionManager::<diesel::PgConnection>::new("postgres://admin:admin@boardgame-db:5432/boardgame?options=-c search_path%3Dboardgame")).expect("connection作れなかったわ"),
+                .build(diesel::r2d2::ConnectionManager::<diesel::PgConnection>::new("postgres://admin:admin@localhost:5432/boardgame?options=-c search_path%3Dboardgame")).expect("connection作れなかったわ"),
             }
         },
     };
