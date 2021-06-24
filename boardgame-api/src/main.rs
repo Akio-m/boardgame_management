@@ -5,6 +5,6 @@ async fn main() -> Result<(), std::io::Error> {
     tide::log::start();
     let app = get_app();
 
-    app.listen("127.0.0.1:21001").await?;
+    app.listen("0.0.0.0:21001").await?;
     Ok(())
 }

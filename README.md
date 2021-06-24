@@ -51,3 +51,31 @@ npm run serve
 cargo test
 cargo run
 ```
+
+
+## build
+
+### 1. create network
+```
+docker network create boardgame-network
+```
+
+### 2. start app
+```
+cd environment
+cd boardgame-web/app/ && ./build.sh
+cd -
+cd boardgame-api/app/ && ./build.sh
+cd -
+./start.sh
+```
+
+### 3. access app
+
+access to [localhost:8080](localhost:8080)
+
+### x. shutdonw app
+```
+cd environment
+./down.sh
+```
