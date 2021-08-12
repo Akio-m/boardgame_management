@@ -1,5 +1,5 @@
-use tide::Server;
 use tide::security::{CorsMiddleware, Origin};
+use tide::Server;
 
 use super::{boardgames, systems};
 

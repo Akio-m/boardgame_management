@@ -1,9 +1,9 @@
-use diesel::PgConnection;
-use r2d2::Pool;
-use diesel::r2d2::ConnectionManager;
-use diesel::prelude::*;
-use mockall::*;
 use async_trait::async_trait;
+use diesel::prelude::*;
+use diesel::r2d2::ConnectionManager;
+use diesel::PgConnection;
+use mockall::*;
+use r2d2::Pool;
 
 #[derive(Queryable, Debug, Clone)]
 pub struct Boardgame {
@@ -31,7 +31,9 @@ impl BoardgamesDb for BoardgamesDbImpl {
     fn find_boardgames(&self) -> Result<Vec<Boardgame>, String> {
         use crate::driver::schema::boardgame::dsl::*;
         let connection = &self.pool.get().unwrap();
-        let result = boardgame.load::<Boardgame>(connection).expect("Error loading boardgame");
+        let result = boardgame
+            .load::<Boardgame>(connection)
+            .expect("Error loading boardgame");
         Ok(result)
     }
 }

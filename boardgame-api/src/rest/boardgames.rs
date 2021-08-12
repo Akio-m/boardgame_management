@@ -1,8 +1,8 @@
+use diesel;
+use r2d2;
 use serde::{Deserialize, Serialize};
 use serde_json::json;
 use tide::{Response, Result, StatusCode};
-use r2d2;
-use diesel;
 
 use crate::domain::boardgames::Boardgames;
 use crate::driver::boardgames_driver::BoardgamesDbImpl;
@@ -110,14 +110,8 @@ mod tests {
                     name: "name1".to_string(),
                     name_kana: "name_kana1".to_string(),
                 },
-                Players {
-                    min: 0,
-                    max: 1,
-                },
-                PlayTime {
-                    min: 0,
-                    max: 30,
-                },
+                Players { min: 0, max: 1 },
+                PlayTime { min: 0, max: 30 },
                 Ages { value: 10 },
                 Manufacturer {
                     value: "maker1".to_string(),
