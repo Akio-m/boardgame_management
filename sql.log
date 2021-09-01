@@ -1,0 +1,3 @@
+docker exec -it boardgame-db bash
+psql -h localhost -U admin -d boardgame
+insert into boardgame.boardgame values ('PRIVACY', 'プライバシーニホンゴバン', 5, 12, 45, null, 18, 'DEAR SPIELE');
