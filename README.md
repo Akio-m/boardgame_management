@@ -67,7 +67,7 @@ cd boardgame-web/app/ && ./build.sh
 cd -
 cd boardgame-api/app/ && ./build.sh
 cd -
-cd boardgame-api/db/ && ./build.sh
+cd boardgame-api/db/docker && ./build.sh
 cd -
 ./start.sh
 ```
@@ -85,6 +85,8 @@ cd environment
 
 ## メモ
 
+- READMEを更新する
+  - すぐに試せるようになるようなREADME
 
 - boardgame-api
   - idがない

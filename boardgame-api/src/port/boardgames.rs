@@ -5,6 +5,6 @@ use mockall::*;
 
 #[automock]
 #[async_trait]
-pub trait BoardgamesPort {
+pub trait BoardgamesPort: Send + Sync {
     async fn find_all(&self) -> Result<Boardgames, String>;
 }
