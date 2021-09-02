@@ -1,18 +1,11 @@
 use crate::{domain::boardgames::Boardgames, port::boardgames::BoardgamesPort};
 
-pub struct GetBoardgameUsecase<T: BoardgamesPort> {
-    pub boardgame_port: T,
-}
-
-impl<T: BoardgamesPort> GetBoardgameUsecase<T> {
-    pub async fn execute(&self) -> Result<Boardgames, String> {
-        self.boardgame_port.find_all().await
-    }
+pub async fn execute(boardgames_port: &dyn BoardgamesPort) -> Result<Boardgames, String> {
+    boardgames_port.find_all().await
 }
 
 #[cfg(test)]
 mod tests {
-    use super::GetBoardgameUsecase;
     use super::*;
     use crate::domain::{
         ages::Ages, boardgames::Boardgame, manufacturer::Manufacturer, name::Name,
@@ -35,8 +28,8 @@ mod tests {
             },
         )]));
 
-        let mut boardgame_port_mock = MockBoardgamesPort::new();
-        boardgame_port_mock
+        let mut boardgames_port_mock = MockBoardgamesPort::new();
+        boardgames_port_mock
             .expect_find_all()
             .return_const(Ok(Boardgames(vec![Boardgame::new(
                 Name {
@@ -51,10 +44,8 @@ mod tests {
                 },
             )])));
 
-        let target = GetBoardgameUsecase {
-            boardgame_port: boardgame_port_mock,
-        };
+        let actual = execute(&boardgames_port_mock).await;
 
-        assert_eq!(target.execute().await, expected);
+        assert_eq!(actual, expected);
     }
 }

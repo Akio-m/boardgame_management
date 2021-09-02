@@ -1,26 +1,14 @@
-use diesel;
-use r2d2;
 use serde::{Deserialize, Serialize};
 use serde_json::json;
 use tide::{Response, Result, StatusCode};
 
 use crate::domain::boardgames::Boardgames;
-use crate::driver::boardgames_driver::BoardgamesDbImpl;
-use crate::{
-    domain::boardgames::Boardgame, gateway::boardgames::BoardgamesGateway,
-    usecase::get_boardgames::GetBoardgameUsecase,
-};
+use crate::port::boardgames::BoardgamesPort;
+use crate::usecase;
+use crate::domain::boardgames::Boardgame;
 
-pub async fn get_boardgames() -> Result {
-    let usecase = GetBoardgameUsecase {
-        boardgame_port: BoardgamesGateway {
-            db: BoardgamesDbImpl {
-                pool: r2d2::Pool::builder()
-                .build(diesel::r2d2::ConnectionManager::<diesel::PgConnection>::new("postgres://admin:admin@localhost:5432/boardgame?options=-c search_path%3Dboardgame")).expect("connection作れなかったわ"),
-            }
-        },
-    };
-    let boardgames = usecase.execute().await.unwrap();
+pub async fn get_boardgames(boardgames_port: &dyn BoardgamesPort) -> Result {
+    let boardgames = usecase::get_boardgames::execute(boardgames_port).await.unwrap();
     let body = json!(BoardgamesJson::from(boardgames));
     Ok(Response::builder(StatusCode::Ok).body(body).build())
 }

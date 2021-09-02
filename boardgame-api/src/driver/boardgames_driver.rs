@@ -23,6 +23,7 @@ pub trait BoardgamesDb {
     fn find_boardgames(&self) -> Result<Vec<Boardgame>, String>;
 }
 
+#[derive(Clone)]
 pub struct BoardgamesDbImpl {
     pub pool: Pool<ConnectionManager<PgConnection>>,
 }
